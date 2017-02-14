@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div ng-controller="EmaillogsController as vm">
+
+			<input type="text" ng-model="vm.searchText" placeholder="Email">
+
+			<button type="Search" class="btn btn-success" ng-click="vm.search()">
+        Search Log
+      </button>
+			<button type="reset" class="btn btn-success" ng-click="vm.reset()">
+        Reset Log
+      </button>
+			<button type="Failed" class="btn btn-success" ng-click="vm.failed()">
+        Failed Log
+      </button>
+			<br/>
+			<br/>
+
+			<div class="spinner">
+				<img src="/images/loader.svg" ng-show="vm.loading" />
+				<div ng-if="!vm.loading">
+
+					<div id="LogtGrid" ui-grid-move-columns ui-grid-selection ui-grid-resize-columns ui-grid-pinning ui-grid-pagination ui-grid-exporter
+						ui-grid-auto-resize ui-grid-edit ui-grid="vm.LogGrid" class="influxGrid"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container" ng-app="RDash">
+	<div class="welcome-text">
+        <% if(status == 'success') { %>
+		<h4>Awesome, <%=msg %>.</h4>
+		<p>Thank you for your RSVP. See you at the <span class="green-text">National Gallery</span> on <span class="green-text">DD/MM/YY, 8pm</span>.<br /> If you’ve any further questions or a 
+			change of plans, please drop XXXX a message at <a href="#">support@publicis.com.sg</a>. We look forward to welcoming the future with you.</p>
+    </div>
+
+    <div class="mid-box" ng-show="vm.participant_id != ''" ng-controller="ConfirmController as vm">
+		<p>Send me an SMS reminder the day before (optional)</p>
+
+        <div class="mid-input">
+			<input type="hidden" ng-init="vm.participant_id='<%=id %>';" />
+			<input type="text" class="txt_input" ng-model="vm.mobile"   />
+			<input type="button" class="btn-input" ng-click="vm.smsSubmit()" />
+        </div>
+
+        <h6>Your number will not be used for any other purposes.</h6>
+    </div>
+    <% } else if(status == 'already_registered') { %>
+	<h4>Already Registered by <%=msg %>.</h4>
+
+	<% } else { %>
+	<h4>User Not Found.</h4>
+	<% } %>
+
+    <div class="conf-bot">
+		<img src="../images/img1.jpg" width="260" height="164" /> 
+    </div>
+</div>

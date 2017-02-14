@@ -1,0 +1,101 @@
+
+
+    <div class="site-wrapper" ng-app="RDash">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+           
+          </div>
+
+          <div class="inner cover">
+            <div class="pull-left lft-content">
+              <div class="heading">
+                <img src="/images/template/gif-fromvid.gif" class="img-responsive"/>
+                <!-- <h1>hello</h1>
+                <h2>tomorrow</h2> -->
+              </div>
+              <div class="img">
+                <img src="/images/template/edb_pattern.jpg" class="img-responsive"/>
+                <div class="footer">
+                <h5>DECODING</h5>
+                <h5>ASIAN CREATIVITY</h5>
+                <h5>FOR INNOVATION</h5>
+            </div>
+              </div>
+            
+            
+            </div>
+
+
+            <div class="pull-right rgt-content">
+              <div class="content-wrapper">
+                <h3>An invitation to the future.</h3>
+                <p>As one of Asia's top leaders, you've been specially selected for an evening of insights, opportunity and collaboration. Join us in uncovering and debating strategies to tap into the creative force behind this region's explosive growth.</p>
+              </div>
+              <div class="date-loc-wrapper">
+                
+                <span class="iwt">
+                <span>22 February 2017<br/>
+                  6.30 pm to 8.45 pm</span>
+                <i class="pull-left icon-date-left"></i>
+                </span>
+             <br/>
+               
+                <span class="iwt">
+                <span>NATIONAL MUSEUM SINGAPORE<br/>
+                  93 Stamford Road</span>
+                <i class="pull-left icon-loc-left"></i>
+                </span>
+              </div>
+              <form ng-controller="ConfirmController as vm">
+	          <% if(status == 'success') { %>
+
+                <div class="checkbox" >
+                  <label>
+                    <input type="checkbox" value="" class="myCheckbox" id="myCheckbox" ng-click="vm.smsChecked=(!vm.smsChecked)">
+                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                    Send me an SMS reminder
+                  </label>
+                </div>
+				<input type="hidden" ng-init="vm.participant_id='<%=id %>';" />
+				<div class="input-text hidefrom">
+                    	<input name="" type="text" class="txt-input" placeholder="+65 123 456 77" ng-model="vm.mobile" />
+                    </div>
+               
+                <button type="button" class="btn btn-danger" ng-click="vm.smsSubmit()" ng-disabled="vm.mobileDone">R  S  V  P</button>
+				 <% } else if(status == 'already_registered') { %>
+				 <div class="content-wrapper">
+				 <br/>
+				 <p>Hi <%=msg %>, you have already confirmed your attendance to the event.</p>
+				 </div>
+
+				<% } else { %>
+				 <div class="content-wrapper">
+				 <br/>
+				 <p>User Not found.</p>
+				 </div>
+				<% } %>
+				</form>
+              <div class="thankyou-wrap confirmMsg" style="display:none;" >
+                <p>Thank you for your confirmation,  <%= msg %>. We look forward to seeing you soon.</p>
+              </div>
+             
+
+            </div>
+            <img src="/images/template/publicis_communication_logo.jpg" class="visible-xs pull-right" /><br/><p>&nbsp;</p> 
+          </div>
+
+          
+
+        </div>
+        <div class="footer-logo-confirm">
+            <div class="inner">
+              <img src="/images/template/publicis_communication_logo.jpg" class="hidden-xs"/>
+            </div>
+          </div>
+      </div>
+
+    </div>

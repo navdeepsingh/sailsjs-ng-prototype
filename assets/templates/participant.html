@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div ng-controller="ParticipantController as vm">
+			<div style="padding-left: 30px;">
+				<button type="button" id="addRow" class="btn btn-success" ng-click="vm.addRow()">Add Row</button>
+				<button type="button" class="btn btn-success" ng-click="vm.openImport(vm.participantGrid)">Import</button>
+				<button type="button" class="btn btn-success" ng-click="vm.sendEmail()">Send email to all unregistered users</button>
+				<button type="button" class="btn btn-success" ng-click="vm.sendSMSToAll()">Send SMS to all registered users</button>
+			</div>
+			<br />
+			<div id="participantGrid" ui-grid-move-columns ui-grid-selection ui-grid-resize-columns ui-grid-pinning ui-grid-pagination
+				ui-grid-exporter ui-grid-auto-resize ui-grid-edit ui-grid="vm.participantGrid" class="influxGrid"></div>
+
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row" ng-controller="DashboardController as di">
+	<div class="col-lg-3 col-md-6 col-xs-12">
+		<rd-widget>
+			<rd-widget-body>
+				<div class="widget-icon green pull-left">
+					<i class="fa fa-users"></i>
+				</div>
+				<div class="title">{{di.usersCount}}</div>
+				<div class="comment">Users</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>		
+
+</div>
+
+
+
+<div class="row">
+
+	<div class="col-lg-6">
+		<rd-widget>
+			<rd-widget-header icon="fa-cog fa-spin" title="Loading Directive">
+				<a href="http://tobiasahlin.com/spinkit/" target="_blank">SpinKit</a>
+			</rd-widget-header>
+			<rd-widget-body>
+
+				<div ng-controller="DashboardController as dash" >
+					<div google-chart chart="dash.myChart1"></div>
+
+					<div google-chart chart="dash.myChart"></div>
+				</div>
+
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+</div>

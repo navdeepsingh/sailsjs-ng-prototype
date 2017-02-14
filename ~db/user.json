@@ -1,0 +1,2 @@
+{"_id":{"$oid":"57c5125c0d600f4028ea0870"},"name":"Publicis Admin","title":"admin","email":"publicis@gmail.com","encryptedPassword":"$2a$10$vdhaKrUANcNwBrJH.S/wJuK7kxq7JfFFsnuzLiUgRiDX7lQkObtla","lastLoggedIn":{"$date":"2016-08-30T04:58:04.607Z"},"gravatarUrl":"http://www.gravatar.com/avatar/e71a0752752677fb01682b65d9fb1f5d?","admin":false,"createdAt":{"$date":"2016-08-30T04:58:04.626Z"},"updatedAt":{"$date":"2016-09-07T11:58:05.499Z"}}
+

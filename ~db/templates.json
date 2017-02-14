@@ -1,0 +1,2 @@
+{"_id":{"$oid":"57fde130b4cfc2ac4871810f"},"name":"test 123","thumb":"http://localhost:1337/images/thumb/1b424d50-d675-4bf9-b790-26dae3383116.jpg","template":"8dcb1ab2-131a-4f6f-8ece-2acfbad4193d.ejs","type":"email","active":false,"createdAt":{"$date":"2016-10-12T07:07:28.867Z"},"updatedAt":{"$date":"2016-10-12T07:35:28.560Z"}}
+

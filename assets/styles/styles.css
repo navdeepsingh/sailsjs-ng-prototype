@@ -1,0 +1,471 @@
+
+/*This is one way to get ng-cloak to work without having to put angular.js loaded at the top of the page.
+Without this angular would not be loaded yet, so it won't recognize ng-cloak.  This is the css that angular
+will ultimately load to make the ng-cloak display none until $compile thing runs. */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+h1,h2,h3,h4,h5,h6,p,a,input,label,span,div {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400 !important;
+}
+h2.form-signin-heading{
+  text-align: center;
+}
+.navbar{
+border-radius: 0px !important;
+}
+.signup-form,.mainbox,.edit-user-from{
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+}
+.signinError {
+ right: 67px;
+ top: 53px;
+ z-index: 100;
+}
+
+/* This moves the signin form over a bit. */
+.navbar-nav.navbar-right:last-child {
+margin-right: 2px;
+}
+
+.gravatarSm {
+ line-height: 3.5;
+}
+
+/* This changes the cursor to a pointer */
+.pointer {
+    cursor: pointer;
+}
+
+/*Modal */
+.modal.smaller-modal{max-height: 310px !important;}
+
+
+/*Modal css*/
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  margin-left: -280px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  outline: none;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding-box;
+          background-clip: padding-box;
+}
+
+.modal.fade {
+  top: -25%;
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+     -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, top 0.3s ease-out;
+          transition: opacity 0.3s linear, top 0.3s ease-out;
+}
+
+.modal.fade.in {
+  top: 10%;
+}
+
+.modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+
+.modal-body {
+  position: relative;
+  max-height: 400px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.modal-form {
+  margin-bottom: 0;
+}
+
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+     -moz-box-shadow: inset 0 1px 0 #ffffff;
+          box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+/*animation*/
+.hideAnimate {
+  transition: all linear 0.5s;
+}
+
+.hideAnimate.ng-hide {
+  opacity: 0;
+}
+.showAnimate {
+  transition: all linear 0.5s;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.showAnimate.ng-hide {
+  height: 0;
+  background-color: transparent;
+  top:-200px;
+  left: 200px;
+}
+/*Quiz listing*/
+table.table.table-hover tbody {
+    overflow: auto !important;
+}
+.table th, .table td {
+    width: 100%;
+}
+.reatedGroupListRow > td:first-child,
+.QuizListingTable th:first-child{
+    width: 70px;
+    text-align: center;
+}
+.QuizListingTable {
+    width: 70%;
+    margin: 0 auto;
+}
+.reatedGroupListRow td:last-child, 
+.QuizListingTable th:last-child {
+    width: 150px;
+}
+
+/*8 Sep Answer Listing*/
+.well-image{
+    width: 100%;
+    height: 162px;
+}
+.top-buffer{
+    margin-top: 30px;
+}
+.answer{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+}
+.answer:hover{
+    cursor: pointer;
+}
+.image-answer{
+    cursor: pointer;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.image-answer img{
+    width: 100%;
+    height: auto;
+}
+.image-selected{
+    border: 3px solid #56afdc;
+}
+.image-answer.bg-success{
+    border: 3px solid #5ea640;
+}
+.image-answer.bg-danger{
+    border: 3px solid #b74848;
+}
+
+/*--Admin Fixes--*/
+.modal {
+    background-color: transparent !important;
+    width: auto !important;
+    left: 25% !important;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+.no-margin-vertical > [class*='col-'] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.listControllerCon table.table {
+    /*border: 1px solid rgba(0,0,0,0.2);*/
+    border-radius: 4px;
+    border-top: none;
+    margin-bottom: 0px;
+}
+.listControllerCon form.form-inline {
+    margin-bottom: 0;
+}
+.listControllerCon {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+.heading-margin-less h1,
+.heading-margin-less h2,
+.heading-margin-less h3,
+.heading-margin-less h4
+{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.resultsCtrlCon {
+    padding: 10px 0.5% 20px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.05);
+    margin-bottom: 40px;
+}
+/*Dropdown*/
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.selected{
+    border: 1px red solid;
+}
+
+
+.container {
+	width:1160px;
+	font-family: 'DINPro';
+	background:#ffffff;
+	margin:0 auto;
+	border:1px solid #c4eec4;
+}
+.welcome-text {
+	width:700px;
+	text-align: center;
+	margin:140px auto 0;
+	
+}
+.welcome-text h4 {
+	font-family: 'DINPro';
+	color:#3cd060;
+	font-weight: 300!important;
+	font-size:4em;
+	line-height:1.5em;
+	margin:0;
+}
+.welcome-text p {
+	font-family: 'DINPro';
+	text-align:center;
+	color:#000;
+	font-size:1.2em;
+	padding-left:30px;
+	padding-right:30px;
+}
+.green-text {
+	color:#3cd060;
+}
+.welcome-text a {
+	color:#3cd060;
+	text-decoration:underline;
+}
+.welcome-text a:hover {
+	color:#3cd060;
+	text-decoration:none;
+}
+.mid-input {
+	width:438px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.txt_input {
+	background-color:#fff;
+	border:1px solid #3cd060;
+	padding:5px;
+	color:#000;
+	width:260px;
+	float:left;
+	height:30px;
+}
+.btn-input {
+	background:url(../images/btn-remind.jpg) no-repeat;
+	width:165px;
+	height:31px;
+	border:none;
+	float:left;
+	cursor:pointer;
+}
+.conf-bot {
+	text-align:center;
+	padding-bottom:40px;
+	padding-top:150px;
+}
+.conf-bot p {
+        font-family: 'DINPro';
+     	padding-top:30px;
+        padding-bottom: 10px;
+}
+
+.mid-box {
+	text-align:center;
+	margin:60px auto 0;
+}
+.mid-box p {
+	font-family: 'DINPro';
+	color:#000;
+	font-size:1em;
+}
+.mid-box h6 {
+	font-family: 'DINPro';
+	font-weight:normal;
+	color:#666666;
+	font-size:0.75em;
+	margin:10px 0 0;
+}
+@font-face {
+	font-family: 'DINPro';
+	src: url('../fonts/DINPro-Light.eot');
+	src: url('../fonts/DINPro-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINPro-Light.woff2') format('woff2'),
+		url('../fonts/DINPro-Light.woff') format('woff'),
+		url('../fonts/DINPro-Light.ttf') format('truetype'),
+		url('../fonts/DINPro-Light.svg#DINPro-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DINPro';
+	src: url('../fonts/DINPro-Regular.eot');
+	src: url('../fonts/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DINPro-Regular.woff2') format('woff2'),
+		url('../fonts/DINPro-Regular.woff') format('woff'),
+		url('../fonts/DINPro-Regular.ttf') format('truetype'),
+		url('../fonts/DINPro-Regular.svg#DINPro-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.spinner{
+    min-height: 100px; 
+    text-align:center; 
+    border: 1px solid #d4d4d4;
+    margin-left: 10px;
+    height: 300px;
+}
+.spinner img{
+    position: relative;
+    top: 26%;
+}
+.txt-input {
+    text-align: center;
+    border: 1px solid #34a0bb;
+    color: #464646;
+    font-size: 1.1em;
+    width: 290px;
+    padding: 5px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:10px;
+}
+
